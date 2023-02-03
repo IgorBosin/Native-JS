@@ -1,7 +1,12 @@
 import {sub, sum} from "./01";
 
-let a = 5
-let b = 10
+let a: number
+let b: number
+
+beforeEach(() => {
+    a = 5
+    b = 10
+})
 
 test('check sub', () => {
     let res = sub(a, b)
@@ -15,7 +20,7 @@ test('check sub', () => {
 })
 
 test('check sum', () => {
-    let res= sum(a,b)
+    let res = sum(a, b)
 
     expect(res).toBe(15)
 })
