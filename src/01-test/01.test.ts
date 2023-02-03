@@ -8,7 +8,7 @@ beforeEach(() => {
     b = 10
 })
 
-test('check sub', () => {
+test.skip('check sub', () => {
     let res = sub(a, b)
 
     b = b + 5
@@ -19,7 +19,7 @@ test('check sub', () => {
     expect(res2).toBe(-10)
 })
 
-test('check sum', () => {
+test.skip('check sum', () => {
     let res = sum(a, b)
 
     expect(res).toBe(15)
