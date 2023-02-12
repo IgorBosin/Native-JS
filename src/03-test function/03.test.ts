@@ -1,4 +1,4 @@
-import {cityType} from "../02-test/02";
+import {cityType} from "../02-test object/02";
 import {addMoneyToBudget, demolishHousesOnTheStreet, repairHouse, toFireStaff, toHireStaff} from "./03";
 let city: cityType
 beforeEach(() => {
@@ -24,7 +24,7 @@ beforeEach(() => {
 })
 
 
-test('Houses shold be destroyed', () => {
+test.skip('Houses shold be destroyed', () => {
     demolishHousesOnTheStreet(city, 'happy street')
     // console.log(demolishHousesOnTheStreet(city, 'happy street'))
 

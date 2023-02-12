@@ -1,5 +1,5 @@
-import {cityType, houseType} from "../02-test/02";
-import {city} from "../02-test/02.test";
+import {cityType, houseType} from "../02-test object/02";
+import {city} from "../02-test object/02.test";
 
 type governmentBuildingsType = {
 type:string,
@@ -13,7 +13,7 @@ export const addMoneyToBudget = (hospitalInfo:governmentBuildingsType, newBudget
     hospitalInfo.budget = hospitalInfo.budget + newBudget
 }
 
-export const demolishHousesOnTheStreet = (cityy: cityType, happyStreet: 'happy street'|"white street") => {
+export let demolishHousesOnTheStreet: (city: cityType, happyStreet: string) => void = (cityy: cityType, happyStreet: 'happy street'|"white street") => {
     return city.houses = cityy.houses.filter((filt) => {
         return filt.address.street.title !== happyStreet
     })
