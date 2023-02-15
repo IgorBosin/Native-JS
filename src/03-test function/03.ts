@@ -13,10 +13,9 @@ export const addMoneyToBudget = (hospitalInfo:governmentBuildingsType, newBudget
     hospitalInfo.budget = hospitalInfo.budget + newBudget
 }
 
-export let demolishHousesOnTheStreet: (city: cityType, happyStreet: string) => void = (cityy: cityType, happyStreet: 'happy street'|"white street") => {
-    return city.houses = cityy.houses.filter((filt) => {
-        return filt.address.street.title !== happyStreet
-    })
+
+export let demolishHousesOnTheStreet = (city: cityType, street: string) => {
+   city.houses = city.houses.filter(filt => filt.address.street.title !== street)
 }
 
 export const repairHouse = (house: houseType) => {

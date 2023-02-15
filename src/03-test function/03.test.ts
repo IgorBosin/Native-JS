@@ -5,19 +5,39 @@ beforeEach(() => {
     city = {
         title: 'Perm',
         houses: [
-            {buildedAt: 2012, repaired: false, address:
-                    {number: 100, street:
-                            {title: "white street"}}},
-            {buildedAt: 2008, repaired: false, address:
-                    {number: 100, street:
-                            {title: 'happy street'}}},
-            {buildedAt: 2020, repaired: false, address:
-                    {number: 101, street:
-                            {title: 'happy street'}}},
+            {
+                id: 1, buildedAt: 2012, repaired: false, address:
+                    {
+                        number: 100, street:
+                            {title: "white street"}
+                    }
+            },
+            {
+                id: 2, buildedAt: 2008, repaired: false, address:
+                    {
+                        number: 100, street:
+                            {title: 'happy street'}
+                    }
+            },
+            {
+                id: 3, buildedAt: 2020, repaired: false, address:
+                    {
+                        number: 101, street:
+                            {title: 'happy street'}
+                    }
+            },
         ],
         governmentBuildings: [
-            {type:'Hospital', budget:200000, staffCount:200, address:{street:{title:"central str"}} },
-            {type:'FIRE-STATION', budget:500000, staffCount:1000, address:{street:{title:"SOUTH str"}} },
+            {
+                type: 'Hospital', budget: 200000, staffCount: 200, address: {
+                    street: {title: "central str"}
+                }
+            },
+            {
+                type: 'FIRE-STATION', budget: 500000, staffCount: 1000, address: {
+                    street: {title: "SOUTH str"}
+                }
+            },
         ],
         citizenNumber: 100000
     }
@@ -26,7 +46,6 @@ beforeEach(() => {
 
 test.skip('Houses shold be destroyed', () => {
     demolishHousesOnTheStreet(city, 'happy street')
-    // console.log(demolishHousesOnTheStreet(city, 'happy street'))
 
     expect(demolishHousesOnTheStreet.length).toBe(1)
     // expect(city.houses[0].id).toBe(1)

@@ -1,6 +1,5 @@
 import {cityType} from "../02-test object/02";
-import {repairHouse, toFireStaff, toHireStaff} from "../03-test function/03";
-import {demolishHousesOnTheStreet, getBuildinsWithStaffCountGreaterThen} from "./04_2";
+import {createMessages, getStreetsTitlesOfGovernmentBuildings, getStreetsTitlesOfHouses} from "./05";
 
 let city: cityType
 
@@ -46,15 +45,29 @@ beforeEach(() => {
     }
 })
 
-test('Houses shold be destroyed', () => {
-    demolishHousesOnTheStreet(city, 'happy street')
+// 01. создайте в том же файле ещё одну функцию, чтобы тесты прошли
+test('list of streets titles of government buildings', ()=> {
+    let streetsNames = getStreetsTitlesOfGovernmentBuildings(city.governmentBuildings);
 
-    expect(city.houses.length).toBe(1)
-    expect(city.houses[0].id).toBe(1)
+    expect(streetsNames.length).toBe(2);
+    expect(streetsNames[0]).toBe("central str");
+    expect(streetsNames[1]).toBe("SOUTH str");
 })
 
-test.skip('buildings with correct staff count', () => {
-    let buildings = getBuildinsWithStaffCountGreaterThen(city.governmentBuildings, 500)
-    expect(buildings.length).toBe(1);
-    expect(buildings[0].type).toBe('FIRE-STATION')
+//02. создайте в том же файле ещё одну функцию, чтобы тесты прошли
+test('list of streets titles', ()=> {
+    let streetsNames = getStreetsTitlesOfHouses(city.houses);
+
+    expect(streetsNames.length).toBe(3);
+    expect(streetsNames[0]).toBe("white street");
+    expect(streetsNames[1]).toBe("happy street");
+    expect(streetsNames[2]).toBe("happy street");
+})
+
+test('create greating messages for streets', ()=>{
+    let messages = createMessages(city.houses)
+
+    expect(messages[0]).toBe('Hi white street')
+    expect(messages[1]).toBe('Hi happy street')
+    expect(messages[2]).toBe('Hi happy street')
 })
