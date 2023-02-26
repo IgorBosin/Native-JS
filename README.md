@@ -4,3 +4,4 @@
 3. commit - lesson 3 (native js - function)
 4. commit - lesson 4 (native js - filter)
 5. commit - lesson 5 (native js - map)
+6. commit - lesson 8 (native js - associative array)
