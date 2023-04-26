@@ -8,3 +8,4 @@
 7. commit - playlist native js #5 (Victor)
 8. commit - lesson 9 (native js - reference type, mutability, мутации)
 9. commit - deep_copy.html (глубокое копирование объектов и массивов)
+10. commit - lesson 10 (native js immutability, имутабельность) 
